@@ -19,16 +19,18 @@ int main()
     printf("Enter string 2: ");
     scanf("%[^\n]s", str2);
     
-    if(!stringcmp(str1, str2))
+    if(!stringcmp(str1, str2)){
         printf("\n stringcmp: Strings are same.");
-    else
+    }
+    else{
         printf("\n stringcmp: Strings are not same.");
-        
-    if(!stringcmpi(str1, str2))
+    }
+    if(!stringcmpi(str1, str2)){
         printf("\n stringcmpi: Strings are same.");
-    else
+    }
+    else{
         printf("\n stringcmpi: Strings are not same.");
-        
+    }
     printf("\n");
 return 0;
 }
@@ -37,7 +39,7 @@ return 0;
 int stringcmp(char *s1, char *s2)
 {
     int i=0;
-    for(i=0; s1[0]!='\0'; i++)
+    for(i=0; s1[i]!='\0'; i++)
     {
         if(s1[i]!=s2[i])
         return 1;
@@ -49,7 +51,7 @@ int stringcmp(char *s1, char *s2)
 int stringcmpi(char *s1, char *s2)
 {
     int i=0, diff=0;
-    for(i=0; s1[i]='\0'; i++)
+    for(i=0; s1[i]!='\0'; i++)
     {
         if(toupper(s1[i])!=toupper(s2[i]))
         return 1;
